@@ -9,15 +9,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/bootstrap-social.css">
-    <link rel="stylesheet" href="assets/css/modal-image.css">
-    <link rel="stylesheet" href="assets/css/resp-image-grid.css">
-    <script src="assets/js/modal-image.js"></script>
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <!--link rel="stylesheet" href="assets/css/resp-image-grid.css"-->
+    <script src="assets/js/lightbox.js"></script>
   </head>
   <body>
       <div class="container">
             <img src="assets/img/library/self.jpg" class="rounded-circle" alt="sani" height="240" style="margin-left: 33.33%">
             <nav class="navbar navbar-expand navbar-light bg-light">
-                <div class="nav navbar-nav" style="text-align:center" >
+                <div class="nav navbar-nav" style="text-align:center;" >
                     <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="#">The String</a>
                     <a class="nav-item nav-link" href="#">About</a>
@@ -27,26 +27,96 @@
             
             <div class="row"> 
                 <div class="column">
-                    <img src="assets/img/library/kavuts.jpg" alt="kavuts">
-                    <img src="assets/img/library/gravity.jpg" alt="gravity">
-                    <img src="assets/img/library/birdgirl.jpg" alt="birdgirl">
+                    <img src="assets/img/library/kavuts.jpg" alt="kavuts" onclick="openModal();currentSlide(1)" class="hover-shadow">
                 </div>
                 <div class="column">
-                    <img src="assets/img/library/lebaran_17.jpg" alt="lebaran 17">
-                    <img src="assets/img/library/pattern 1.jpg" alt="pattern 1">
-                    <img src="assets/img/library/pattern 2.jpg" alt="pattern 2">
-                </div> 
-                <div class="column">
-                    <img src="assets/img/library/1-1.jpg" alt="1-1">
-                    <img src="assets/img/library/2-1.jpg" alt="2-1">
-                    <img src="assets/img/library/3-1.jpg" alt="3-1">
+                    <img src="assets/img/library/gravity.jpg" alt="gravity" onclick="openModal();currentSlide(2)" class="hover-shadow">
                 </div>
                 <div class="column">
-                    <img src="assets/img/library/1-1.jpg" alt="1-1">
-                    <img src="assets/img/library/2-1.jpg" alt="2-1">
-                    <img src="assets/img/library/3-1.jpg" alt="3-1">
+                    <img src="assets/img/library/birdgirl.jpg" alt="birdgirl" onclick="openModal();currentSlide(3)" class="hover-shadow">
                 </div>
             </div>
+            <div class="row"> 
+                <div class="column">   
+                    <img src="assets/img/library/lebaran_17.jpg" alt="lebaran 17" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="assets/img/library/pattern 1.jpg" alt="pattern 1" onclick="openModal();currentSlide(5)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="assets/img/library/pattern 2.jpg" alt="pattern 2" onclick="openModal();currentSlide(6)" class="hover-shadow">
+                </div> 
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img src="assets/img/library/1-1.jpg" alt="1-1" onclick="openModal();currentSlide(7)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="assets/img/library/2-1.jpg" alt="2-1" onclick="openModal();currentSlide(8)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="assets/img/library/3-1.jpg" alt="3-1" onclick="openModal();currentSlide(9)" class="hover-shadow">
+                </div>
+            </div>
+            <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+            
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 9</div>
+                        <img src="assets/img/library/kavuts.jpg" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 9</div>
+                        <img src="assets/img/library/gravity.jpg" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 9</div>
+                        <img src="assets/img/library/birdgirl.jpg" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 9</div>
+                        <img src="assets/img/library/lebaran_17.jpg" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 9</div>
+                        <img src="assets/img/library/pattern 1.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 9</div>
+                        <img src="assets/img/library/pattern 2.jpg" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 9</div>
+                        <img src="assets/img/library/1-1.jpg" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">8 / 9</div>
+                        <img src="assets/img/library/2-1.jpg" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">9 / 9</div>
+                        <img src="assets/img/library/2-1.jpg" style="width:100%">
+                    </div>
+                
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+                </div>
       </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
